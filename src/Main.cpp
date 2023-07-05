@@ -11,7 +11,7 @@ std::string loadImage(sf::Texture &texture)
 	while (!imgLoaded)
 	{
 		std::cout << "Give path to an image you want to modify or drag your image here: ";
-		std::cin >> imagePath;
+		std::getline(std::cin,imagePath); // if there's a space in Image Path 
 		if (texture.loadFromFile(imagePath))
 		{
 			imgLoaded = true;
